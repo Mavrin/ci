@@ -1,7 +1,7 @@
 {
-  "name": "shower",
-  "description": "Shower HTML presentation engine",
-  "version": "2.1.9",
+  "name": "ci-for-frontend",
+  "description": "CI for frontend",
+  "version": "1.0.0",
   "author": {
     "name": "Vadim Makeev",
     "url": "http://pepelsbey.net/"
@@ -27,12 +27,18 @@
     "README.md"
   ],
   "dependencies": {
+    "eslint": "^3.17.1",
     "shower-core": "^2.1.0",
     "shower-material": "^1.0.11",
     "shower-ribbon": "^2.0.10"
   },
+  "thresholdFileSize": 100,
   "devDependencies": {
     "del": "^2.2.1",
+    "eslint": "3.17.1",
+    "eslint-config-standard": "7.0.1",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "2.1.1",
     "fs": "0.0.2",
     "gulp": "^3.9.1",
     "gulp-gh-pages": "^0.5.4",
@@ -41,6 +47,7 @@
     "gulp-rsync": "0.0.7",
     "gulp-zip": "^4.0.0",
     "merge-stream": "^1.0.0",
+    "mocha": "^3.2.0",
     "path-exists-cli": "^1.0.0",
     "run-sequence": "^1.2.2",
     "shower-core": "^2.0.8"
@@ -49,6 +56,8 @@
     "prepare": "gulp prepare",
     "archive": "gulp archive",
     "publish": "gulp publish",
-    "test": "npm run prepare && ls prepared && npm run archive && path-exists archive.zip"
+    "test": "mocha tests/*.test.js",
+    "lint": "eslint cool-module.js",
+    "check-file-size": "node check-file-size.js"
   }
 }
