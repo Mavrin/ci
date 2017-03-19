@@ -3,8 +3,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm --version'
+                sh 'npm install'
             }
+        }
+        stage('lint') {
+			steps {
+				sh 'npm run lint'
+			}
         }
     }
 }
