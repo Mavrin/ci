@@ -19,10 +19,14 @@ pipeline {
     stage('test') {
       steps {
         sh '''
-        	npm test || TEST_RESULTS=$?
+        	npm test || touch fail
 		'''
         junit 'test-results.xml'
-        sh 'exit $TEST_RESULTS'
+        sh '''
+        	if [ -f ./fail ]; then
+                exit 1
+            fi
+        '''
       }
     }
     stage('check-file-size') {
