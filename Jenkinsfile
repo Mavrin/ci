@@ -11,12 +11,12 @@ pipeline {
 				sh 'npm run lint'
 			}
         }
-        stage('lint') {
+        stage('test') {
 			steps {
 				sh 'npm test'
 			}
 		}
-		stage('lint') {
+		stage('check-file-size') {
 			steps {
 				sh 'npm run check-file-size'
 			}
