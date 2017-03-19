@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'sudo npm install'
+                sh 'chmod a=rwx -R .'
+                sh 'npm install'
             }
         }
         stage('lint') {
