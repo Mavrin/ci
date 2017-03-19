@@ -3,7 +3,7 @@ pipeline {
     dockerfile {
       filename 'Dockerfile'
     }
-    
+
   }
   stages {
     stage('build') {
@@ -18,10 +18,13 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh '''set -e
-npm test'''
+        sh '''
+        	set -e
+			npm test
+			$RESULT=$?
+		'''
         junit 'test-results.xml'
-        sh 'exit $?'
+        sh 'exit $RESULT'
       }
     }
     stage('check-file-size') {
