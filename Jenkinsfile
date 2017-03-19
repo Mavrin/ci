@@ -18,7 +18,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'npm test --reporter mocha-junit-reporter'
+        sh 'npm test'
       }
     }
     stage('check-file-size') {
