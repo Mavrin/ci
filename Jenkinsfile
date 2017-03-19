@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'chmod a=rwx -R .'
                 sh 'npm install'
             }
         }
