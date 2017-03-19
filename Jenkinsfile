@@ -3,7 +3,7 @@ pipeline {
     dockerfile {
       filename 'Dockerfile'
     }
-    
+
   }
   stages {
     stage('build') {
@@ -18,7 +18,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'npm test'
+        sh 'npm test --reporter mocha-junit-reporter'
       }
     }
     stage('check-file-size') {
