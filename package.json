@@ -56,7 +56,7 @@
     "prepare": "gulp prepare",
     "archive": "gulp archive",
     "publish": "gulp publish",
-    "test": "mocha tests/*.test.js --reporter mocha-junit-reporter",
+    "test": "mocha tests/*.test.js --no-exit --reporter mocha-junit-reporter",
     "lint": "eslint cool-module.js",
     "check-file-size": "node check-file-size.js",
     "travis": "npm run test && npm run lint && npm run check-file-size"
