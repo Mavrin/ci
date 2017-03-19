@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm install'
+                sh 'sudo npm install'
             }
         }
         stage('lint') {
@@ -11,5 +11,15 @@ pipeline {
 				sh 'npm run lint'
 			}
         }
+        stage('lint') {
+			steps {
+				sh 'npm test'
+			}
+		}
+		stage('lint') {
+			steps {
+				sh 'npm run check-file-size'
+			}
+		}
     }
 }
