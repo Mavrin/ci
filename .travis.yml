@@ -1,17 +1,5 @@
 language: node_js
 node_js:
   - "6"
-env:
-  matrix:
-  - TEST_TYPE=test
-  - TEST_TYPE=lint
-  - TEST_TYPE=size
 script:
-  - |
-    if [ "$TEST_TYPE" = test ]; then
-      npm test
-    elif [ "$TEST_TYPE" = size ]; then
-      npm run check-file-size
-    elif [ "$TEST_TYPE" = lint ]; then
-      npm run lint
-    fi
+  npm run travis

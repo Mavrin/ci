@@ -57,6 +57,7 @@
     "publish": "gulp publish",
     "test": "mocha tests/*.test.js",
     "lint": "eslint cool-module.js",
-    "check-file-size": "node check-file-size.js"
+    "check-file-size": "node check-file-size.js",
+    "travis": "npm run test && npm run lint && npm run check-file-size"
   }
 }
