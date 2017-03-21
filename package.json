@@ -31,7 +31,7 @@
     "shower-material": "^1.0.11",
     "shower-ribbon": "^2.0.10"
   },
-  "thresholdFileSize": 120,
+  "thresholdFileSize": 100,
   "devDependencies": {
     "del": "^2.2.1",
     "eslint": "3.17.1",
