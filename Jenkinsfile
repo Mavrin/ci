@@ -23,6 +23,7 @@ pipeline {
 		'''
         junit 'test-results.xml'
         sh '''
+        	#!/bin/bash
         	if [ -f ./fail ]; then
                 exit 1
             fi
