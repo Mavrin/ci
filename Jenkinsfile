@@ -22,7 +22,7 @@ pipeline {
         	npm test || touch fail
 		'''
         junit 'test-results.xml'
-        sh 'bash ./check-test-result'
+        sh 'bash ./check-test-result.sh'
       }
     }
     stage('check-file-size') {
