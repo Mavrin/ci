@@ -31,7 +31,7 @@
     "shower-material": "^1.0.11",
     "shower-ribbon": "^2.0.10"
   },
-  "thresholdFileSize": 100,
+  "thresholdFileSize": 120,
   "devDependencies": {
     "del": "^2.2.1",
     "eslint": "3.17.1",
@@ -56,7 +56,7 @@
     "prepare": "gulp prepare",
     "archive": "gulp archive",
     "publish": "gulp publish",
-    "test": "mocha tests/*.test.js --no-exit --reporter mocha-junit-reporter",
+    "test": "mocha tests/*.test.js --reporter mocha-junit-reporter",
     "lint": "eslint cool-module.js",
     "check-file-size": "node check-file-size.js",
     "travis": "npm run test && npm run lint && npm run check-file-size"
