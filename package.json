@@ -33,6 +33,7 @@
   },
   "thresholdFileSize": 120,
   "devDependencies": {
+    "chai": "^3.5.0",
     "del": "^2.2.1",
     "eslint": "3.17.1",
     "eslint-config-standard": "7.0.1",
@@ -47,6 +48,7 @@
     "gulp-zip": "^4.0.0",
     "merge-stream": "^1.0.0",
     "mocha": "^3.2.0",
+    "mocha-junit-reporter": "^1.13.0",
     "path-exists-cli": "^1.0.0",
     "run-sequence": "^1.2.2",
     "shower-core": "^2.0.8"
@@ -55,9 +57,9 @@
     "prepare": "gulp prepare",
     "archive": "gulp archive",
     "publish": "gulp publish",
-    "test": "mocha tests/*.test.js",
+    "test": "rm -f fail && mocha tests/*.test.js --reporter mocha-junit-reporter",
     "lint": "eslint cool-module.js",
-    "check-file-size": "node check-file-size.js",
+    "check-file-size": "rm -f ./test-results.xml && mocha ./check-file-size.js --reporter mocha-junit-reporter",
     "travis": "npm run test && npm run lint && npm run check-file-size"
   }
 }
