@@ -27,7 +27,9 @@ pipeline {
     }
     stage('check-file-size') {
       steps {
-        sh 'npm run check-file-size'
+        sh 'npm run check-file-size  || touch fail'
+        junit 'test-results.xml'
+        sh 'node ./check-test-result.js'
       }
     }
   }
