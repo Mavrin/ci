@@ -60,7 +60,6 @@
     "test": "rm -f fail && mocha tests/*.test.js --reporter mocha-junit-reporter",
     "lint": "eslint cool-module.js",
     "check-file-size": "rm -f ./test-results.xml && mocha ./check-file-size.js --reporter mocha-junit-reporter",
-    "check-test-result": "node ./check-file-size.js",
     "travis": "npm run test && npm run lint && npm run check-file-size"
   }
 }
