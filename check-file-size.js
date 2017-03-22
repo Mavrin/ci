@@ -1,4 +1,4 @@
-const fs = require('fs') //Load the filesystem module
+const fs = require('fs') // Load the filesystem module
 const stats = fs.statSync('./cool-module.js')
 const thresholdFileSize = require('./package.json').thresholdFileSize
 const fileSizeInBytes = stats.size
