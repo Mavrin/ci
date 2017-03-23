@@ -1,0 +1,113 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/konstantin/.nvm/versions/node/v6.10.0/bin/node',
+1 verbose cli   '/Users/konstantin/.nvm/versions/node/v6.10.0/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/konstantin/ci',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/konstantin/.npm/ci-for-frontend/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/konstantin/.npm correctMkdir not in flight; initializing
+10 info lifecycle ci-for-frontend@1.0.0~prepublish: ci-for-frontend@1.0.0
+11 silly lifecycle ci-for-frontend@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/konstantin/.npm/ci-for-frontend/1.0.0/package.tgz',
+12 verbose tar pack   '/Users/konstantin/ci' ]
+13 verbose tarball /Users/konstantin/.npm/ci-for-frontend/1.0.0/package.tgz
+14 verbose folder /Users/konstantin/ci
+15 verbose addLocalTarball adding from inside cache /Users/konstantin/.npm/ci-for-frontend/1.0.0/package.tgz
+16 verbose correctMkdir /Users/konstantin/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd ci-for-frontend@1.0.0
+18 verbose afterAdd /Users/konstantin/.npm/ci-for-frontend/1.0.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/konstantin/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/konstantin/.npm/ci-for-frontend/1.0.0/package/package.json written
+21 silly publish { name: 'ci-for-frontend',
+21 silly publish   description: 'CI for frontend',
+21 silly publish   version: '1.0.0',
+21 silly publish   author: { name: 'Vadim Makeev', url: 'http://pepelsbey.net/' },
+21 silly publish   homepage: 'https://github.com/shower/shower',
+21 silly publish   repository: { type: 'git', url: 'git://github.com/shower/shower.git' },
+21 silly publish   bugs: { url: 'http://github.com/shower/shower/issues' },
+21 silly publish   license: 'MIT',
+21 silly publish   keywords: [ 'shower', 'presentation', 'template' ],
+21 silly publish   files: [ 'pictures/**', 'index.html', 'LICENSE.md', 'README.md' ],
+21 silly publish   dependencies:
+21 silly publish    { 'shower-core': '^2.1.0',
+21 silly publish      'shower-material': '^1.0.11',
+21 silly publish      'shower-ribbon': '^2.0.10' },
+21 silly publish   thresholdFileSize: 120,
+21 silly publish   devDependencies:
+21 silly publish    { del: '^2.2.1',
+21 silly publish      eslint: '3.17.1',
+21 silly publish      'eslint-config-standard': '7.0.1',
+21 silly publish      'eslint-plugin-promise': '3.5.0',
+21 silly publish      'eslint-plugin-standard': '2.1.1',
+21 silly publish      fs: '0.0.2',
+21 silly publish      gulp: '^3.9.1',
+21 silly publish      'gulp-gh-pages': '^0.5.4',
+21 silly publish      'gulp-rename': '^1.2.2',
+21 silly publish      'gulp-replace': '^0.5.4',
+21 silly publish      'gulp-rsync': '0.0.7',
+21 silly publish      'gulp-zip': '^4.0.0',
+21 silly publish      'merge-stream': '^1.0.0',
+21 silly publish      mocha: '^3.2.0',
+21 silly publish      'path-exists-cli': '^1.0.0',
+21 silly publish      'run-sequence': '^1.2.2',
+21 silly publish      'shower-core': '^2.0.8' },
+21 silly publish   scripts:
+21 silly publish    { prepare: 'gulp prepare',
+21 silly publish      archive: 'gulp archive',
+21 silly publish      publish: 'gulp publish',
+21 silly publish      test: 'mocha tests/*.test.js',
+21 silly publish      lint: 'eslint cool-module.js',
+21 silly publish      'check-file-size': 'node check-file-size.js',
+21 silly publish      travis: 'npm run test && npm run lint && npm run check-file-size' },
+21 silly publish   readme: '[![Build Status](https://travis-ci.org/Mavrin/ci.svg?branch=master)](https://travis-ci.org/Mavrin/ci)\n\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '05343e0ad9ae7f0be5c65710ea62dbd67c035e86',
+21 silly publish   _id: 'ci-for-frontend@1.0.0',
+21 silly publish   _shasum: '02e8998ac7e35488b5ccfc92b968757df6cc0b68',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name ci-for-frontend
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'ci-for-frontend',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'ci-for-frontend',
+26 silly mapToRegistry   name: 'ci-for-frontend',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/ci-for-frontend
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/konstantin/.npm/ci-for-frontend/1.0.0/package.tgz
+30 verbose stack Error: auth required for publishing
+30 verbose stack     at CachingRegistryClient.publish (/Users/konstantin/.nvm/versions/node/v6.10.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:30:14)
+30 verbose stack     at /Users/konstantin/.nvm/versions/node/v6.10.0/lib/node_modules/npm/lib/publish.js:138:14
+30 verbose stack     at mapToRegistry (/Users/konstantin/.nvm/versions/node/v6.10.0/lib/node_modules/npm/lib/utils/map-to-registry.js:62:3)
+30 verbose stack     at publish_ (/Users/konstantin/.nvm/versions/node/v6.10.0/lib/node_modules/npm/lib/publish.js:107:3)
+30 verbose stack     at Array.<anonymous> (/Users/konstantin/.nvm/versions/node/v6.10.0/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+30 verbose stack     at LOOP (/Users/konstantin/.nvm/versions/node/v6.10.0/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+30 verbose stack     at LOOP (/Users/konstantin/.nvm/versions/node/v6.10.0/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+30 verbose stack     at chain (/Users/konstantin/.nvm/versions/node/v6.10.0/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+30 verbose stack     at /Users/konstantin/.nvm/versions/node/v6.10.0/lib/node_modules/npm/lib/publish.js:73:5
+30 verbose stack     at RES (/Users/konstantin/.nvm/versions/node/v6.10.0/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+31 verbose cwd /Users/konstantin/ci
+32 error Darwin 16.4.0
+33 error argv "/Users/konstantin/.nvm/versions/node/v6.10.0/bin/node" "/Users/konstantin/.nvm/versions/node/v6.10.0/bin/npm" "publish"
+34 error node v6.10.0
+35 error npm  v3.10.10
+36 error code ENEEDAUTH
+37 error need auth auth required for publishing
+38 error need auth You need to authorize this machine using `npm adduser`
+39 verbose exit [ 1, true ]
