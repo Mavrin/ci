@@ -11,6 +11,12 @@
 		.slide pre.hg {
 			margin-bottom: 0;
 		}
+		.slide:after {
+			display: none;
+		}
+		.slide .shout {
+			font-size: 120px;
+		}
 	</style>
 </head>
 <body class="shower list">
@@ -19,8 +25,10 @@
 	<h1>Непрерывная интеграция для frontend</h1>
 	<p><a target="_blank" href="https://twitter.com/krivlenia">Константин Кривленя</a></p>
 </header>
-
-<section class="slide" id="cover">
+<section class="slide">
+	<img src="pictures/cover.jpg" class="shout" alt="">
+</section>
+<!--<section class="slide" id="cover">
 	<h2>Непрерывная интеграция для frontend</h2>
 	<p><a target="_blank" href="https://twitter.com/krivlenia">Константин Кривленя</a></p>
 	<style>
@@ -37,8 +45,10 @@
 			font-size: 20px;
 		}
 	</style>
+</section>-->
+<section class="slide">
+	<h2 class="shout"><a href="https://goo.gl/2fXwj1">goo.gl/2fXwj1</a></h2>
 </section>
-
 <section class="slide">
 	<h2 class="shout shrink">
 		git pull origin master
@@ -66,7 +76,18 @@
 		</pre>
 </section>
 <section class="slide">
-	<p>test code, link to tdd</p>
+	<pre class="hg">
+			<code class="js">
+const coolModule = require('../cool-module')
+const assert = require('assert')
+describe('test cool module', () => {
+  it(`Answer to the Ultimate Question of Life,
+				the Universe, and Everything`, () => {
+    assert.equal(42, coolModule.doSomething())
+  })
+})
+			</code>
+		</pre>
 </section>
 <section class="slide">
 	<figure>
@@ -84,9 +105,6 @@
 			<code>6:3 <mark style="color: red">error</mark>  Expected indentation of 4 spaces but found 2 tabs  <mark>indent</mark></code>
 			<code style="color: red">✖ 2 problems (2 errors, 0 warnings) </code>
 		</pre>
-</section>
-<section class="slide">
-	<p>eslint config, link to eslint</p>
 </section>
 <section class="slide">
 	<h2>Размер сборки</h2>
@@ -281,6 +299,14 @@ pipeline {
 <section class="slide">
 	<a  target="_blank" href="http://localhost:8080/blue/organizations/jenkins/pipeline-editor/Mavrin%2Fci/jenkins"><img class="shout" src="pictures/settings_pipeline.png" alt="settings pipeline"></a>
 </section>
+<section class="slide">
+	<pre class="hg"><code class="bash" style="font-size: 30px">
+	docker run -d --name jenkins -p
+	8080:8080 -v $PWD/jenkins:/var/jenkins_home
+	-v /var/run/docker.sock:/var/run/docker.sock
+	-t logimethods/blueocean
+	</code></pre>
+</section>
 
 <section class="slide">
 	<h2>Другие CI</h2>
@@ -312,7 +338,7 @@ pipeline {
 </section>
 
 <section class="slide">
-	<h2 class="shout">Один шаг к непрерывной доставке</h2>
+	<h2 class="shout" style="font-size: 100px">Один шаг к непрерывной доставке</h2>
 </section>
 
 <section class="slide">
