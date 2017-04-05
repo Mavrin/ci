@@ -72,9 +72,9 @@
 21 silly publish      travis: 'npm run test && npm run lint && npm run check-file-size' },
 21 silly publish   readme: '[![Build Status](https://travis-ci.org/Mavrin/ci.svg?branch=master)](https://travis-ci.org/Mavrin/ci)\n\n',
 21 silly publish   readmeFilename: 'README.md',
-21 silly publish   gitHead: '05343e0ad9ae7f0be5c65710ea62dbd67c035e86',
+21 silly publish   gitHead: '4d05ca66591f68a6d540d71c8ece2527ed18a88e',
 21 silly publish   _id: 'ci-for-frontend@1.0.0',
-21 silly publish   _shasum: '02e8998ac7e35488b5ccfc92b968757df6cc0b68',
+21 silly publish   _shasum: '4f32d9dd4fad6c1e63fdb9880a92012915adfd46',
 21 silly publish   _from: '.' }
 22 verbose getPublishConfig undefined
 23 silly mapToRegistry name ci-for-frontend
